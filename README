@@ -1,0 +1,47 @@
+##### GENERAL DESCRIPTION #####
+
+The BAOlab package enables to perform different operations for the tasks of BAO detection and BAO parameter constraints. It is based on the work in the 2 ApJ papers Labatie et al. 2012. The main novelty of our approach is that it enables to obtain a model-dependent covariance matrix which can change the results both for BAO detection and for parameter constraints.
+
+##### DESCRIPTION OF DIFFERENT PROGRAMS #####
+
+The different programs are:
+	*ps_transform: Converts a lognormal input power spectrum to the corresponding power spectrum of the underlying Gaussian field (see Coles and Jones 91)
+	*lognormal: Creates a lognormal density field with a given window function, possibly redshift dependent mean density, and corresponding Gaussian power spectrum
+	*cf: Computes the correlation function of a given catalogue
+	*cf_alpha: Computes the correlation function of a given catalogue which has a dependence on alpha (i.e. points in the catalogues belong to different alpha ranges)
+	*delta_chi2: computes the histogram of the delta_chi2 statistic for different input models (with no-BAO or BAO hypothesis and with or without varying covariance matrix)
+	*lratio: computes the histogram of the generalized likelihood ratio statistic for different input models (with no-BAO or BAO hypothesis and with or without varying covariance matrix)
+
+
+These programs allow different options, but they also use parameters that can be changed in the folder /param (this enables to change these parameters without the need to recompile every time)
+
+
+
+##### INSTALLATION #####
+
+To install this package you will need: 
+	*cmake in order to create the Makefile
+	*the libraries cfitsio and fftw3 
+	*a fortran compiler
+
+You can download and install these program and libraries from the internet:
+	* http://www.cmake.org/ for cmake
+	* http://heasarc.gsfc.nasa.gov/fitsio/ for cfitsio
+	* http://www.fftw.org/ for fftw3
+
+As an alternative you can use a software such as macports and just run the "port install" command. 
+	*"port install cmake" for cmake
+	*"port install cfitsio" for cfitsio
+	*"port install fftw-3" for fftw3
+
+When this is the case, just go to the repertory build/ and run the command "cmake .." which will use the file CMakeLists.txt in order to create the Makefile. The path of the different libraries should be found automatically by cmake. If the libraries are not automatically found by cmake, you can do a simple comment/uncomment procedure described in the file CMakeLists.txt. However this new setup will require that your linker can find theses libraries automatically.
+
+Once the Makefile is created you can run "make" in order to compile the different programs in the folder build/ or you can run "make install" if you also want to copy of the different executables into the directory bin/ (this is required by the different idl scripts)
+
+
+
+##### IDL SCRIPTS #####
+
+In order to run the idl scripts you will need:
+	*the iCosmo package available online (http://icosmo.pbworks.com/w/page/11708457/FrontPage)
+	*to include the idl/ folder in your idl path by adding the following line in your .idlrc file: "!PATH=expand_path(BAOlab_path+'idl/')+':'+!PATH+':'" with BAOlab_path the path to the BAOlab package

@@ -1,0 +1,36 @@
+Use_Density		1
+Name_Density		../input_files/simu/DR7-Full_dens_max.dat
+Use_Mask		1
+Name_Mask		../input_files/simu/mask_lambdaeta_so.fits
+
+x2min			-600.0				
+y2min			-520.0
+z2min			-920.0
+length(Mpc/h)		2200.0
+nbar(Mpc/h)^{-3}	0.0001
+
+Name_Out_Cat_Prefix	../output_files/lognormal/
+
+
+
+
+
+
+
+
+
+;;;;;;Geometrical Params for DR7_Full North hemisphere;;;;;
+x2min			-600.0				
+y2min			-520.0
+z2min			-920.0
+length(Mpc/h)		2200.0
+nbar(Mpc/h)^{-3}	0.0001
+
+;;;;;;Geometrical Params for DR7_Full South hemisphere;;;;;
+x2min			-1500.0				
+y2min			-1490.0
+z2min			0.0
+length(Mpc/h)		1925.0
+nbar(Mpc/h)^{-3}	0.0001
+
+;;; Get same resolution a N=800 grid for North and N=700 grid for South

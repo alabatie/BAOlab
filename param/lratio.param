@@ -1,0 +1,19 @@
+Omegamh^2(min,max,delta)	0.10	0.16	0.01
+alpha(min,max,delta)		0.8	1.2	0.05
+B(min,max,delta)		4.0	9.0	0.25
+B_model				6.25
+
+Name_alpha_table		../input_files/model/alpha_table.fits
+Name_Omegamh^2_table		../input_files/model/Omegamh2_table.fits
+Name_B_table			../input_files/model/B_table.fits
+
+Name_Model_BAO_all		../input_files/model/xi_lrg_BAO.fits
+Name_Model_noBAO_all		../input_files/model/xi_lrg_nowiggles.fits
+Name_Inverse_Cov_all		../input_files/simu/inverse_cov_all.fits
+Name_Sqrt_Cov_all		../input_files/simu/sqrt_cov_all.fits
+Name_Log_Determ_Cov_all		../input_files/simu/log_determ_cov_all.fits
+Name_Inverse_Cov		../input_files/simu/inverse_cov.fits
+Name_Sqrt_Cov			../input_files/simu/sqrt_cov.fits
+n_simu_bao_detection		50000.0
+
+Name_Out_Prefix			../output_files/lratio/
